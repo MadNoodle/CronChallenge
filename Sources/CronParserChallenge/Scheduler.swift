@@ -17,8 +17,20 @@ struct Scheduler {
     let spanMinutes: String
     let hour: String
     
-    /// date from now
-    var simulatedTime: Date = .init()
+    /// input date formated HH:mm
+    let simulatedTimeString: String
+    
+    /// Compute String to Date for simulatedTime
+    var simulatedTime: Date {
+      get throws {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        guard let date = dateFormatter.date(from: simulatedTimeString) else {
+          throw SchedulerError.invalidArgument
+        }
+        return date
+      }
+    }
     
     /// extract the next execution hour
     func getNextExecutionTime() throws -> (hour:Int, minutes:Int, day: String) {
