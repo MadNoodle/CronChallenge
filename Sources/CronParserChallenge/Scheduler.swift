@@ -65,8 +65,8 @@ private extension Scheduler {
     /// transform cron elements to date components
     func getSimulatedTimeComponents() throws -> (hour: Int, minutes: Int) {
         let calendar = Calendar.current
-        let simulatedMinutes = calendar.component(.minute, from: simulatedTime)
-        let simulatedHour = calendar.component(.hour, from: simulatedTime)
+        let simulatedMinutes = try calendar.component(.minute, from: simulatedTime)
+        let simulatedHour = try calendar.component(.hour, from: simulatedTime)
         return (simulatedHour, simulatedMinutes)
     }
     

@@ -43,7 +43,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D30B4F37283179B600829C5C /* CronParserChallenge */ = {
+		D3495F69283E482C00050ABA /* CronParserChallenge */ = {
 			isa = PBXGroup;
 			children = (
 				D35025B4283173220053B47A /* main.swift */,
@@ -73,7 +73,7 @@
 		D35025B3283173220053B47A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D30B4F37283179B600829C5C /* CronParserChallenge */,
+				D3495F69283E482C00050ABA /* CronParserChallenge */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
